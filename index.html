@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Exercício CSS - Hiring Coders</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="Deivi Coelho - Logotipo 2.png" alt="Logo Deiv" width="80px" >
+        </div>
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/deiviocoelho">Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.instagram.com/deivicoelho.oarq/">Instagram</a>
+            </li>
+            <li>
+                <a target="_blank" href="">E-mail</a>
+            </li>
+        </ul>
+    </header>
+    <main class="center">
+        <section class="container">
+                 <div class="name">
+                <h1>Deivi Coelho</h1>
+                <h5>Desenvolvedor Web</h5>
+                 </div>
+
+                 <div onclick="displayAbout()" id="arrow">
+                    <i id="animation" class="fa-solid fa-circle-arrow-down"></i>
+                 </div>
+
+                 <div style="display: none;" id="about">
+                
+                      <p>
+                    Hello World, meu nome é Deivide Coelho e venho de uma longa trajetória no mundo da Arquitetura e Urbanismo, me aprofundando especialmente em Iluminação de Interiores. Atualmente me encontro às portas do mundo do Desenvolvimento Web, trilhando o curso de Sistemas para Internet, na Universidade Salvador. 
+
+                    Nesse início de caminhada em tecnologia, já construí conhecimentos em metodologias ágeis (SCRUM e Kanban) e estou à procura de oportunidades para aprender mais e me desenvolver profissionalmente.
+                    
+                    Como fã de tecnologia que sou, apoio a evolução de um mundo conectado e acessível a todos. Let's code?
+                      </p>
+                 
+                 </div>
+
+                   <div class="form">
+                      <div>
+                    <p>
+                        Deixe seu contato!
+                    </p>
+                  
+                     </div>
+                          <form action="">
+                             <input type="text" placeholder="Seu melhor email">
+                         <button>Enviar</button>
+                         </form>
+                    </div>
+        </section>
+    </main>
+
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById('animation') /* procurar elemento especificado*/
+            arrow.classList.toggle('rotate'); /* se a classe estiver nessa lista ele remove, se nao tiver ele adiciona */
+            var display = document.getElementById("about");
+            display.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

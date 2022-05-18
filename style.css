@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    color: #ffc857;
+    font-family: Arial, Helvetica, sans-serif;
+    /* zerar padding e margin padrão, e colocar o border box para manter tamanhos de div*/
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    /* sem sublinhados e afins no link */
+}
+
+body {
+    min-height: 100vh; /* permite que o body defina um valor de altura mínima com base na altura total da viewport*/
+    background: url(Imagens/desenvolvimento-da-web-codificacao-e-programacao-de-codigo-de-computador-de-banner-futuristico-no-laptop_3482-5572.webp) no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(15px);
+    
+    /* o cover vai garantir que a imagem cubra toda a extensão da tela, com o no repeat, center e fixed, fixado e centralizado, sem repetir */
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 45px;
+
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    padding: 5px;
+}
+
+header ul li a{
+   transition: 100ms;
+}
+
+header ul li a:hover{
+    color: #e429f5;
+    text-decoration:underline;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    max-height: 600px;
+    max-width: 700px;
+    min-height: 300px;
+    min-width: 400px;
+}
+.container .name h1{
+    font-size: 50px;
+}
+
+.container .name h5{
+    font-size: 20px;
+}
+
+#arrow {
+    font-size: 25px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;  /* animação para piscar*/
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;  /* chamando animação para piscar*/
+    }
+}
+
+#animation {
+    transition: 300ms;
+}
+.rotate {
+    transform: rotate(180deg); /* rodas 180º*/
+    transition: 500ms; /* tempo para conseguir enxergar a animação*/
+}
+
+.active {
+    display: block !important; 
+}
+
+#about p{
+    max-width: 600px; /*responsividade*/
+    padding: 20px;
+    margin: 0 auto;
+    text-align: justify;
+    
+    
+    
+}
+
+.form {
+    width: 50%; /* ocupar 40% da div pai */
+    margin: 0 auto;
+}
+
+.form input{
+    width: 70%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.form button{
+    width: 30%;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #ffc857 50%, #e429f5 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #ffffff;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 20px;
+    margin-left: -5px;
+}
+
+.form button:hover{
+    background-position: left bottom;
+
+}
+
+@media only screen and (max-widht: 480px) {
+
+    #about p {
+        max-width: 80%;
+    }
+    .container {
+        margin: 50px;
+    }
+
+}
